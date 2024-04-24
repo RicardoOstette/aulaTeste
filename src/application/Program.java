@@ -12,32 +12,33 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Students[] vet = new Students [10];		
+		Students[] std = new Students [10];		
 		
-		System.out.print("How many will be rented? ");
+	\\ teste aula sobrescrevendo tudo 
+
+		System.out.print("How MANY will be rented? ");
 		int n = sc.nextInt();
-		
+
 		for (int i = 0; i < n; i++) {
 			System.out.println();
 			System.out.printf("Rent: #%d%n", i + 1);
-			System.out.print("Name: ");
+			System.out.print("NAME: ");
 			sc.nextLine();
 			String name = sc.nextLine();
-			System.out.print("Email: ");
+			System.out.print("EMAIL: ");
 			String email = sc.nextLine();
-			System.out.print("Room: ");
+			System.out.print("ROOM: ");
 			int room = sc.nextInt();
-			vet[room - 1] = new Students(name, email, room);
+			std[room - 1] = new Students(name, email, room);
 		}
-
-		System.out.println();
-		System.out.println("Busy rooms: ");
-		
-		for (int i = 0; i < vet.length ; i++) {
+	
+	\\ leitura da lista: 
+	
+		for (int i = 0; i < std.length ; i++) {
 			if (vet[i] != null) {
 				System.out.println(vet[i]);
 			}
-		}
+		}		
 		
 		
 		sc.close();
